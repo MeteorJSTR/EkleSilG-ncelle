@@ -1,19 +1,33 @@
 <head>
-  <title>test</title>
+  <title>Ekle Sil Güncelle</title>
+<!--Font awesome - İcon dosyaları-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--Font awesome - İcon dosyaları-->
+
 </head>
 
 <body>
+
+<!-- Giriş çıkış işlemleri -->
   {{> loginButtons}}
+<!-- Giriş çıkış işlemleri -->
 
-  {{>yazilar}}
+<!--Yazılar template'i-->
+    {{>yazilar}}
+<!--Yazılar template'i-->
 
+<!--Yazı Ekleme template'i-->
   {{>yaziEkle}}
-
-
+<!--Yazı Ekleme template'i-->
 
 </body>
 
+<!--
+Template'leri body dışında tanımlıyoruz, başka bir html dosyasına'da koyabilirdik fakat ilk aşamada burda durabilirler.
+Meteor içerisinde html taglerini kullanmamıza gerek yoktur.
+-->
+
+<!--Yazılar template'i-->
 <template name="yazilar">
 
     <ul>
@@ -25,11 +39,14 @@
     </ul>
 
 </template>
+<!--Yazılar template'i-->
 
 
+<!--Yazı ekleme template'i-->
 <template name="yaziEkle">
     <form action="">
         <input type="text" name="yazi">
         <input type="submit" value="Kaydet">
     </form>
 </template>
+<!--Yazı ekleme template'i-->
