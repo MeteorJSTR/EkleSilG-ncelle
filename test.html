@@ -1,0 +1,35 @@
+<head>
+  <title>test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  {{> loginButtons}}
+
+  {{>yazilar}}
+
+  {{>yaziEkle}}
+
+
+
+</body>
+
+<template name="yazilar">
+
+    <ul>
+        {{#each yazilar }}
+            <li>
+                {{ yazi }} <span class="fa fa-trash sil"></span>
+            </li>
+        {{/each}}
+    </ul>
+
+</template>
+
+
+<template name="yaziEkle">
+    <form action="">
+        <input type="text" name="yazi">
+        <input type="submit" value="Kaydet">
+    </form>
+</template>
