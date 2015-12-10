@@ -12,13 +12,20 @@
   {{> loginButtons}}
 <!-- Giriş çıkış işlemleri -->
 
-<!--Yazılar template'i-->
-    {{>yazilar}}
-<!--Yazılar template'i-->
 
-<!--Yazı Ekleme template'i-->
-  {{>yaziEkle}}
-<!--Yazı Ekleme template'i-->
+<!--Giriş yapılmadan işlemler yapılmaması için-->
+{{#if currentUser}}
+    <!--Yazılar template'i-->
+    {{>yazilar}}
+    <!--Yazılar template'i-->
+
+    <!--Yazı Ekleme template'i-->
+    {{>yaziEkle}}
+    <!--Yazı Ekleme template'i-->
+{{/if}}
+<!--Giriş yapılmadan işlemler yapılmaması için-->
+
+
 
 </body>
 

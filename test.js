@@ -10,6 +10,13 @@ Yazilar = new Mongo.Collection("Yazilar");
 if (Meteor.isClient) {
 
   /**
+   * Kayıtları kullanıcı adı üzerinden almak için.
+   */
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
+
+  /**
    * Kullanıcıların kendi yazıları sunucudan publish ( paylaşılıyor ) bizde onu subscribe ( takip ) ediyoruz!
    * Bu sayede veritabanından veriler kullanıcı bazlı filtrelenerek geliyor.
    */
